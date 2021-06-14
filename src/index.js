@@ -4,12 +4,33 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+class MyForm extends React.Component {
+  render() {
+    return (
+      <form>
+        <h1>Feedback Form</h1>
+        <p>Name:</p>
+        <input
+          type="text"
+        />
+        <p>Email:</p>
+        <input
+          type="email"
+        />
+        <p>Feedback:</p>
+        <input
+          type="textarea"
+        />
+        <p></p>
+        <input
+        type='submit'
+        />
+      </form>
+    );
+  }
+}
+
+ReactDOM.render(<MyForm />, document.getElementById('root'));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
